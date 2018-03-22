@@ -18,16 +18,12 @@ const { firebase } = window;
 
 // Initialize Firebase
 const config = {
-    apiKey: 'AIzaSyCnEU6YVAc6xONN_sExk63lTw3xvw3ZkSk',
-    authDomain: 'cl-magenta-jam.firebaseapp.com',
-    databaseURL: 'https://cl-magenta-jam.firebaseio.com',
-    projectId: 'cl-magenta-jam',
-    storageBucket: 'cl-magenta-jam.appspot.com',
-    messagingSenderId: '220325612662'
+    //put your firebase config here
 };
 
 
-firebase.initializeApp(config);
+//uncomment here to use database
+//firebase.initializeApp(config);
 
 
 //the keys in state that we care about storing
