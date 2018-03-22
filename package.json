@@ -1,0 +1,89 @@
+{
+  "name": "beat-blender",
+  "version": "0.2.0",
+  "description": "use machine learning to explore the latent space between drum beats",
+  "main": "js/index.js",
+  "gcloud": {
+    "production": {
+      "id": "gweb-beat-blender",
+      "version": "comingsoon"
+    },
+    "dev": {
+      "id": "ml-loopz-demo",
+      "version": "qa"
+    },
+    "devPort": 8080,
+    "devAdminPort": 8000
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            [
+              "env",
+              {
+                "targets": {
+                  "browsers": [
+                    "last 2 versions",
+                    "safari >= 7"
+                  ]
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "deploy-production": "npm run build && gcloud app deploy --project $npm_package_gcloud_production_id --version $npm_package_gcloud_production_version",
+    "deploy-staging": "npm run build && gcloud app deploy --project $npm_package_gcloud_production_id --version staging --no-promote --quiet",
+    "deploy-dev": "npm run build && gcloud app deploy --project $npm_package_gcloud_dev_id --version $npm_package_gcloud_dev_version --quiet",
+    "dev_appserver": "dev_appserver.py app.yaml --port=$npm_package_gcloud_devPort --admin_port=$npm_package_gcloud_devAdminPort --host=0.0.0.0",
+    "browse": "gcloud app browse --project $npm_package_gcloud_id",
+    "build": "npm run less && browserify js/index.js -o assets/bundle.js",
+    "less": "lessc less/style.less assets/style.css",
+    "start": "npm run less && concurrently \"npm run watchify\" \"autoless less/ assets/\" \"npm run dev_appserver\"",
+    "watchify": "watchify js/index.js --debug -o assets/bundle.js --verbose"
+  },
+  "author": "Google Creative Lab",
+  "contributors": [
+    "Kyle Phillips",
+    "Torin Blankensmith"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "autoless": "^0.1.7",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "concurrently": "^3.5.0",
+    "debounce": "^1.1.0",
+    "less": "^2.7.3",
+    "query-string": "^6.0.0",
+    "shortid": "^2.2.8",
+    "tone": "^0.11.11",
+    "watchify": "^3.9.0",
+    "whatwg-fetch": "^2.0.3",
+    "@magenta/music-vae": "^1.0.3",
+    "startaudiocontext" : "^1.2.1"
+  },
+  "devDependencies": {
+    "animitter": "^3.0.0",
+    "assert": "^1.4.1",
+    "dat-gui": "^0.5.0",
+    "deep-extend": "^0.5.0",
+    "eases": "^1.0.8",
+    "event-map": "^2.0.0",
+    "grid2d": "^1.0.0",
+    "mixin-deep": "^1.3.1",
+    "object-assign": "^4.1.1",
+    "object-path": "^0.11.4",
+    "page": "^1.8.3",
+    "throttleit": "^1.0.0",
+    "tone-piano": "^0.0.5"
+  }
+}

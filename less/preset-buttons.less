@@ -1,0 +1,74 @@
+/**
+ these styles are exclusively for the preset links
+ for things like "amen break"
+ */
+
+.preset-button-container {
+    &.active {   
+        max-height: 1000px;
+        opacity: 1.0;
+    }
+    max-height: 0px;
+    opacity: 0.0;
+    height: auto;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    transition: max-height 400ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.preset-button, .generate-new-beat-button {
+    .tablet({
+        font-size: 12px!important;
+    });
+    .mobile-landscape({
+        font-size: 10px!important;
+        margin-top: 0px;
+        margin-left: 1px;
+        margin-bottom: 0px;
+    });
+    .mobile({
+        font-size: 14px!important;
+    });
+    &.active {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    &:hover {
+        color: white;
+        border-color: white;
+    }
+    min-height: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    // border-bottom: 2px solid;
+    border-color:  rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    margin-top: 6px;
+    margin-left: 10px;
+    // padding: 4px 0px 4px 0px;
+    padding: 0px;
+    font-size: 14px;
+    // line-height: 20px;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
+.generate-new-beat-button {
+    &.isSafari {
+        -webkit-text-fill-color: @linkColor !important;    
+    }
+    background: linear-gradient(270deg, #9da7fa, #e076f7, #9bf8cb, #c5f68f);
+    background-size: 500% 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: GradientBlendAnimation 10s ease infinite;
+    @keyframes GradientBlendAnimation { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+}

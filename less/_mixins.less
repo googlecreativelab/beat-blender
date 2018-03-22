@@ -1,0 +1,42 @@
+.tablet(@rules) {
+    @media (max-width: 991px) {
+        @rules();
+    }
+}
+
+.mobile-landscape(@rules) {
+    @media only screen and (orientation: landscape) and (max-height: 490px) {
+        @rules();
+    }
+}
+
+.mobile(@rules) {
+    @media (max-width: 479px) {
+        @rules();
+    }
+}
+.transition(@duration, @easeType) {
+    -webkit-transition: opacity @duration @easeType, color @duration @easeType, background-color @duration @easeType;
+    transition: opacity @duration @easeType, color @duration @easeType, background-color @duration @easeType;
+}
+
+
+.flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-direction(@direction) {
+    -webkit-flex-direction: @direction;
+    -ms-flex-direction: @direction;
+    flex-direction: @direction;
+}
+
+.flex-wrap(@wrap) {
+    -webkit-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+}
+

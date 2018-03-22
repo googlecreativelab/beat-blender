@@ -1,0 +1,265 @@
+@linkColor: #c5ee94;
+body.loading {
+    .splash {
+        .splash-icon {
+            .mobile({
+                margin-top: 70px!important;
+            });
+        }
+        display: table;
+        z-index: 2;
+        position: absolute;
+    }
+}
+
+.splash, modal-container {
+    //hidden unless loading
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    color: rgba(255,255,255, 0.8);
+
+    h1 {
+        .mobile({
+            font-size: 38px;
+        });
+        .mobile-landscape({
+            font-size: 30px; 
+            margin-top: 10px;
+        });
+        color: #fff;
+        font-size: 42px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    a, a:visited, a:active {
+        &:hover {
+            opacity: 1.0;
+        }
+        border: none;
+        opacity: 0.8;
+        transition: all 300ms ease-in-out;
+        color: @linkColor;
+        text-decoration: none;
+    }
+
+    .how-it-works {
+        &:hover {
+            border-bottom: 2px solid @linkColor;
+        }
+    }
+
+    .splash-description, .splash-info {
+        .mobile-landscape({
+            font-size: 18px;
+            margin-bottom: 10px;   
+            margin-top: 0px; 
+        });
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .splash-info{
+        color: #9e9e9e;
+    }
+
+    .splash-play-button {
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: @linkColor;
+            color:white;
+        }
+
+        .mobile-landscape({
+            font-size: 18px;  
+            margin-bottom: 10px;
+            width: 120px;
+            height: 40px;
+        });
+
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-size: 22px;
+        display: block;
+        box-sizing: border-box;
+        width: 205px;
+        height: 65px;
+        border: 2px solid @linkColor;
+        text-transform: uppercase;
+        color: @linkColor;
+        text-align: center;
+        background-color: #121212;
+        transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+    }
+
+    .splash-wrapper {
+        .mobile-landscape({
+            top: 40%;
+            width: 400px;
+        });
+        
+        .mobile({
+            width: 300px;
+            top: 40%;
+        });
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        vertical-align: middle;
+    }
+
+
+    .splash-privacy {
+        .mobile({
+            bottom: 2px;
+            right:50%;
+            transform: translateX(50%);
+            // right: 20px;
+            text-align: center;
+            font-size: 10px;
+        });
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 12px;
+    }
+
+    .badge-break {
+        display: inline-block;
+        position: relative;
+        margin-right: 20px;
+        height: 57px;
+        background-color: #fff;
+        opacity: .35;
+        width: 1px;
+    }
+
+    
+
+    .badge-wrapper {
+       
+        .mobile-landscape({
+            height: 68px;
+            width: 300px;
+            display: flex;
+            align-items: flex-end;
+            bottom: 0px;
+        });
+
+        .mobile({
+            bottom: 12px;
+            height: 68px;
+            width: 300px;
+            left: 50%;
+            margin-left: 0px;
+            transform: translateX(-50%);
+            align-items: flex-end;
+            display: flex;
+            transform: translateX(-50%);
+            justify-content: space-between;
+            max-width: auto;
+            // max-width: auto;
+        });
+        position: absolute;
+        display: inline-block;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .badge {
+        &:hover {
+            opacity: 1.0;
+        }
+        transition: opacity 300ms ease-in-out;
+        transition-duration: 300ms ease-in-out;  
+        opacity: 0.7;
+        display: inline-block;
+        position: relative;
+        margin-right: 20px;
+        width: 120px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: .7;
+        overflow: hidden;
+
+    }
+
+    .ai-experiment{
+        background-image: url('../assets/images/ai-experiment.svg')
+    }
+    
+    .google-friends{
+        background-image: url('../assets/images/friends-at-google.svg')
+    }
+
+    .magenta-link {
+        font-weight: 700;
+        font-size: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        color: #fff;
+
+        .magenta-logo {
+            .magenta-logo-device() {
+                margin-top: 10px;
+                width: 40px !important;
+                height: 40px !important;
+            };
+            .mobile-landscape({
+                .magenta-logo-device();
+            });
+            .mobile({
+                .magenta-logo-device();
+            });
+            background-image: url('../assets/images/magenta-logo.png');
+            background-size: 90% 90%;
+            background-position: 0;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 60px;
+            float: left;
+        }
+
+        .magenta-text {
+            .magenta-text-device() {
+                margin-top: 16px;
+                width: 30px !important;
+                font-size: 5px !important;
+            }
+            .mobile-landscape({
+                .magenta-text-device();
+            });
+            .mobile({
+                .magenta-text-device();
+            });
+            margin-top: 14px;
+            float: right;
+            height: 100%;
+            width: 60px;
+            color: white;
+            span {
+                text-decoration: underline;
+                color: #c5ee94;
+            }
+        }
+    }
+    
+
+}
+
+

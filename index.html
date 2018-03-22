@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Beat Blender</title>
+        <link rel="stylesheet" href="/ai/beat-blender/view/assets/style.css">
+        <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+        <meta content="https://experiments.withgoogle.com/ai/beat-blender/view/assets/images/beat-blender-social.png" property="og:image">
+        <meta content="Blend beats using machine learning to create music in a fun new way." property="og:description">
+
+        <meta name="fb:app_id" content="224976884733659">
+        <meta name="og:url" content="https://experiments.withgoogle.com/ai/beat-blender/view/"/>
+        <meta name="og:title" content="Beat Blender"/>
+        <meta name="og:description" content="Blend beats using machine learning to create music in a fun new way."/>
+        <meta name="description" content="Blend beats using machine learning to create music in a fun new way."/>
+        <meta name="og:image" content="/ai/beat-blender/view/assets/images/beat-blender-social.png"/>
+    
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Beat Blender">
+        <meta name="twitter:description" content="Blend beats using machine learning to create music in a fun new way.">
+        <meta name="twitter:image" content="https://experiments.withgoogle.com/ai/beat-blender/view/assets/images/beat-blender-social.png">
+        <meta name="twitter:site" content="@google">
+        <meta name="twitter:image:alt" content="Beat Blender">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link href="/ai/beat-blender/view/assets/images/favicon-small.png" rel="shortcut icon" type="image/x-icon">
+        <link href="/ai/beat-blender/view/assets/images/favicon.png" rel="apple-touch-icon">
+    </head>
+    <body class="loading">
+        <section class="splash allow-while-loading">
+            <div class="splash-wrapper">
+                <img class="splash-icon" src="/ai/beat-blender/view/assets/images/blend-palindrome-2.gif" width="48" height="48" alt="Beat Blender icon"/>
+                <h1>Beat Blender</h1>
+                <div class="device-supported">
+                    <p class="splash-description">Blend beats using machine learning to create music in a fun new way.</p>
+                    <button class="splash-play-button">LOADING...</button>
+                    <p class="splash-info"> Built with Deeplearn.js <br/>
+                        <a class="how-it-works" href="/ai/beat-blender/view/about">Learn how it works</a>
+                    </p>
+                </div>
+                <p class="device-not-supported splash-description" style="display: none">Sorry, looks like your browser or device doesn't support this experiment.
+                    Learn more about Beat Blender <a href="https://experiments.withgoogle.com/ai/beat-blender">here</a>. Or try visiting this site in a browser like Chrome.
+                </p>
+            </div>
+            <div class="badge-wrapper">
+                <a class="ai-experiment badge" href="https://aiexperiments.withgoogle.com" target="_blank" ></a>
+                
+                <div class="badge-break"></div>
+                <a class="google-friends badge" href="https://aiexperiments.withgoogle.com" target="_blank"></a>
+                <div class="badge-break"></div>
+                <a class="magenta-link badge" href="https://magenta.tensorflow.org/" target="_blank" >
+                    <div class="magenta-logo"></div>
+                    <div class="magenta-text">Built using <span>Magenta</span>
+                    </div>
+                </a>
+                
+                
+            </div>
+            <div class="splash-privacy"> 
+                <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy &amp; </a>
+                <a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
+            </div>
+            
+
+        </section>
+        <section class="modal allow-while-loading"></section>
+        <canvas class="tile drag-tile"></canvas>
+        <div class="wrapper">
+            <div class="waist">
+                <div id="grid-container">
+                    <div id="group-corners"></div>
+                    <canvas id="grid-view"></canvas>
+                </div>
+                <h2 class="sequencer-label"></h2>
+                <div id="sequencer-container">
+                    <canvas id="sequencer-view" title="sequencer"></canvas>
+                    <div class="edit-mode-group"></div>
+                    <div class="play-mode-group">
+                        <div class="preset-button-container">
+                            <h3>PRESET BEATS</h3>
+                        </div>
+                        <button id="edit-corners-button" class="base-button">EDIT CORNERS</button>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="column">
+                    <div id="drag-draw-toggle" class="toggle"></div>
+                </div>
+                <div class="column">
+                    <button id="play-pause-button" class="play-pause-button"></button>
+                    <div id="bpm-slider" class="bpm-slider"></div>
+                </div>
+                <div class="column right-footer-column">
+                    <div id="midi-output-container">
+                        <select class="base-select" id="midi-out-selector"></select>
+                    </div>
+                    <!-- <a href="#" id="download-midi" class="output-button ">DOWNLOAD MIDI</a> -->
+                    <a href="#" onclick="return false;" id="about" class="output-button about-button">ABOUT</a>
+                    <a href="#" onclick="return false;" id="share" class="output-button save-button">SAVE</a>
+                </div>
+            </footer>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86665855-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-86665855-5', {
+                'referrer' : document.referrer.split('?')[0],
+            });
+
+        </script>
+        <script src="/ai/beat-blender/view/assets/bundle.js"></script>
+    </body>
+</html>

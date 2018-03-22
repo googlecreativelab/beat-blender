@@ -1,0 +1,190 @@
+/**
+ these styles are exclusively for the preset links
+ for things like "amen break"
+ */
+
+.modal{
+    &.active {
+        visibility: visible !important;
+        opacity: 1.0;
+        pointer-events: all;
+    }
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 3;
+    display: block;
+    width: auto;
+    height: auto;
+
+    color: rgba(255, 255, 255, 0.5);
+    background: rgb(33, 33, 33);
+    opacity: 0.0;
+    transition: opacity 300ms ease-in-out;
+
+    h2 {
+        .mobile({
+            font-size: 20px;
+        });
+    }
+
+    .modal-container {
+        
+        top: 30px;
+        transform: translate(-50%, 0px);
+        padding: 10px 10px 30px 10px;
+        width: 95%;
+        position: absolute;
+        display: flex;
+        left: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 750px;
+        padding: 10px 10px 10px 10px;
+        z-index: 2;
+        // margin-right:auto;
+        // margin-left: auto;
+        
+      }
+    p {
+        .mobile({
+            line-height: 22px;
+            font-size: 17px;
+        });
+        line-height: 28px;
+        font-size: 22px;
+        text-align: left;
+        // letter-spacing: 0.01em;
+    }
+    a {
+        color: @linkColor;
+    }
+
+    .output-button {
+        
+        color: @linkColor;
+        margin: 20px auto 15px auto ;
+        padding: 10px;
+        font-size: 15px;
+        border: none;
+        background: none;
+        outline:none;
+    }
+
+    
+
+    .base-button {
+        
+        &:hover {
+            color: white;
+            opacity: 1.0;
+            background-color: @linkColor;   
+        };
+        .mobile({
+            font-size: 15px;
+            min-width: 120px;
+        });
+        
+        min-width: 162px;
+        margin-top: 0px;
+        padding: 12px 10px 10px 10px;
+        // padding-top: 14px;
+        opacity: 0.8;
+        border: 1px solid @linkColor;
+        background: none;
+        display: inline-block;
+        margin: 5px;
+        font-size: 20px;
+        transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+    }
+
+    .copy-link {
+        cursor: pointer;
+        .mobile({
+            font-size: 15px!important;
+        });
+        font-size: 20px;
+    }
+    .copy-link.copied {
+        color: white;
+    }
+    .social-container {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    input {
+        .mobile({
+            width: 300px;
+            font-size: 13px;
+        });
+        margin-top: 15px;
+        -webkit-appearance: none;
+        font-size: 17px;
+        width: 365px;
+        height: 30px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        text-align: center;
+        border-radius: 2px;
+        background: none;
+        color: white;
+        background-color: rgba(69, 69, 69, 0.8);
+    }
+}
+
+.video { 
+    .mobile-landscape({
+        height: 200px;
+        width: 340px;
+    });
+    
+    .mobile({
+        height: 300px;;
+    });
+    height: 500px;
+    width: 100%;
+}
+
+.exit {
+    &:hover{
+        cursor: pointer;
+        opacity: 1.0;
+    }
+    .exit-device(){
+        top:10px;
+        width: 20px;
+        height: 20px;       
+    }
+    .tablet({
+        .exit-device();
+    });
+    .mobile-landscape({
+        .exit-device();
+    });
+    
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+    background:transparent;
+    border: none;
+    position: absolute;
+    outline: none;
+    top: 10px;
+    right: 10px;
+    background-image: url('images/exit.svg');
+    background-position: 50% 50%;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    z-index: 3;
+    transition: opacity 300ms ease-in-out;
+}

@@ -1,0 +1,11 @@
+npm-debug.log
+yarn-error.log
+.idea
+*.pyc
+assets/*.js
+assets/*.css
+node_modules/
+.sass-cache
+.DS_Store
+*.swp
+public/*

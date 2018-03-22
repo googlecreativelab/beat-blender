@@ -1,0 +1,128 @@
+@offColor: hsla(0, 0%, 100%, .5);
+@onColor: white;
+@iconOnColor: #212121;
+@iconOffColor: white;
+@transitionDuration: 0.5s;
+@transitionType: ease-in-out;
+@toggleSize: 35px;
+@toggleSizeTablet: 20px;
+
+
+#drag-draw-toggle {
+    .drag-draw-toggle-device() {
+        margin-left: 0px;
+        left: 50%;
+        transform: translateX(-40%);
+    }
+    .tablet({
+        .drag-draw-toggle-device();
+    });
+    .mobile-landscape({
+        .drag-draw-toggle-device();
+    });
+    margin-left: 50%;
+    
+    .toggle-button {
+        .tablet({
+            margin-bottom: 5px;
+            border-radius: @toggleSizeTablet * 0.5;
+        });
+        border-radius: @toggleSize * 0.5;
+    }
+    .toggle-slider {
+        border-radius: 50%;
+    }
+}
+.toggle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: stretch;
+    flex: 1;
+    pointer-events: none;
+    opacity: 0.5;
+
+    &.active {
+        cursor: pointer;
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    &.right-selected {
+        .toggle-label-a {
+            color: @offColor;
+        }
+        .toggle-label-b {
+            color: @onColor;
+        }
+        .toggle-slider {
+            margin-left: 50%;
+        }   
+    }
+
+    .toggle-label-a {
+        color: @onColor;
+    }
+    .toggle-label-b {
+        color: @offColor;
+    }
+
+    .toggle-button {
+        .tablet({
+            width: @toggleSizeTablet * 2;
+            height: @toggleSizeTablet;
+        });
+        position: relative;
+        width: @toggleSize * 2;
+        height: @toggleSize;
+        margin-right: 0px;
+        margin-left: 0px;
+        background-color: #4b4b4b;
+        cursor: pointer;
+    }
+    
+    
+    .toggle-slider {
+        .tablet({
+            width: @toggleSizeTablet;
+            height: @toggleSizeTablet;
+        });
+        position: relative;
+        // z-index: 2;
+        width: @toggleSize;
+        height: @toggleSize;
+        background-color: #fff;
+        margin-left: 0px;
+        transition-property: margin;
+        transition-duration: @transitionDuration;
+
+    }
+
+    .toggle-label {
+        .toggle-label-device() {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .mobile-landscape({
+            font-size: @mobile-font-size;
+            .toggle-label-device();
+        });
+        .tablet({
+            font-size: @tablet-font-size;
+            .toggle-label-device();
+        });
+        position: static;
+        overflow: visible;
+        margin-left: 15px;
+        margin-right: 15px;
+        
+        transition-property: color;
+        transition-duration: @transitionDuration;  
+    }
+}
+
+
+

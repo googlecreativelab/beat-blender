@@ -1,0 +1,43 @@
+
+.edit-mode-group {
+  &.active {
+    opacity: 1.0;
+    max-height: 1000px;
+
+  }
+  height: auto;
+  max-height: 0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.0;
+  .transition(@transitionDuration, @transitionType);
+  transition: max-height @transitionDuration @transitionType;
+}
+
+.edit-sequencer-button {
+    &:hover {
+      background-color: #fff;
+      color: #000;  
+      border: 2px solid white;
+    }
+    .mobile-landscape({
+      font-size: 10px;
+    });
+    -webkit-appearance: none;
+    color: #ffffff80;  
+    outline: none;
+    position: relative;
+    min-height: auto;
+    width: 49%;
+    cursor: pointer;
+    padding-top: 4px;
+    margin: 0;
+    border: 2px solid #4b4b4b;
+    background-color: #4b4b4b00;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, border 300ms ease-in-out;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+}

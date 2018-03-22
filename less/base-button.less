@@ -1,0 +1,39 @@
+.base-button {
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    &.active{
+        min-width: 40px!important;
+    }
+    outline: none;
+    border: none;
+    .transition(300ms, ease-in-out);
+    opacity: 1.0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    min-height: auto;
+    width: auto;
+    min-width: 130px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 46px;
+    background-color: #4b4b4b;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: min-width 400ms ease-in-out;
+
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}
+

@@ -1,0 +1,93 @@
+{
+  "decoder/multi_rnn_cell/cell_0/lstm_cell/bias": {
+    "filename": "decoder_multi_rnn_cell_cell_0_lstm_cell_bias", 
+    "shape": [
+      1024
+    ]
+  }, 
+  "decoder/multi_rnn_cell/cell_0/lstm_cell/kernel": {
+    "filename": "decoder_multi_rnn_cell_cell_0_lstm_cell_kernel", 
+    "shape": [
+      1024, 
+      1024
+    ]
+  }, 
+  "decoder/multi_rnn_cell/cell_1/lstm_cell/bias": {
+    "filename": "decoder_multi_rnn_cell_cell_1_lstm_cell_bias", 
+    "shape": [
+      1024
+    ]
+  }, 
+  "decoder/multi_rnn_cell/cell_1/lstm_cell/kernel": {
+    "filename": "decoder_multi_rnn_cell_cell_1_lstm_cell_kernel", 
+    "shape": [
+      512, 
+      1024
+    ]
+  }, 
+  "decoder/output_projection/bias": {
+    "filename": "decoder_output_projection_bias", 
+    "shape": [
+      512
+    ]
+  }, 
+  "decoder/output_projection/kernel": {
+    "filename": "decoder_output_projection_kernel", 
+    "shape": [
+      256, 
+      512
+    ]
+  }, 
+  "decoder/z_to_initial_state/bias": {
+    "filename": "decoder_z_to_initial_state_bias", 
+    "shape": [
+      1024
+    ]
+  }, 
+  "decoder/z_to_initial_state/kernel": {
+    "filename": "decoder_z_to_initial_state_kernel", 
+    "shape": [
+      256, 
+      1024
+    ]
+  }, 
+  "encoder/cell_0/bidirectional_rnn/bw/multi_rnn_cell/cell_0/lstm_cell/bias": {
+    "filename": "encoder_cell_0_bidirectional_rnn_bw_multi_rnn_cell_cell_0_lstm_cell_bias", 
+    "shape": [
+      2048
+    ]
+  }, 
+  "encoder/cell_0/bidirectional_rnn/bw/multi_rnn_cell/cell_0/lstm_cell/kernel": {
+    "filename": "encoder_cell_0_bidirectional_rnn_bw_multi_rnn_cell_cell_0_lstm_cell_kernel", 
+    "shape": [
+      522, 
+      2048
+    ]
+  }, 
+  "encoder/cell_0/bidirectional_rnn/fw/multi_rnn_cell/cell_0/lstm_cell/bias": {
+    "filename": "encoder_cell_0_bidirectional_rnn_fw_multi_rnn_cell_cell_0_lstm_cell_bias", 
+    "shape": [
+      2048
+    ]
+  }, 
+  "encoder/cell_0/bidirectional_rnn/fw/multi_rnn_cell/cell_0/lstm_cell/kernel": {
+    "filename": "encoder_cell_0_bidirectional_rnn_fw_multi_rnn_cell_cell_0_lstm_cell_kernel", 
+    "shape": [
+      522, 
+      2048
+    ]
+  }, 
+  "encoder/mu/bias": {
+    "filename": "encoder_mu_bias", 
+    "shape": [
+      256
+    ]
+  }, 
+  "encoder/mu/kernel": {
+    "filename": "encoder_mu_kernel", 
+    "shape": [
+      1024, 
+      256
+    ]
+  }
+}

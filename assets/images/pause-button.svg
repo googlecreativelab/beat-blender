@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Beat-Blender---08" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-131.000000, -693.000000)">
+        <g id="Pause-&amp;-BPM" transform="translate(98.000000, 660.000000)" fill="#454545">
+            <g id="Pause-Button">
+                <path d="M33,47 L37,47 L37,33 L33,33 L33,47 L33,47 Z M41,33 L41,47 L45,47 L45,33 L41,33 L41,33 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

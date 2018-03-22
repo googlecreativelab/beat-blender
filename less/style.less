@@ -1,0 +1,248 @@
+@import '_mixins.less';
+@import 'layout.less';
+@import 'responsive.less';
+@import 'grid-view.less';
+@import 'tile.less';
+@import 'preset-buttons.less';
+@import 'midi-out.less';
+@import 'play-pause-button.less';
+@import 'edit-sequencer-button.less';
+@import 'base-button.less';
+@import 'base-select.less';
+@import 'toggle.less';
+@import 'bpm.less';
+@import 'modal.less';
+@import 'spinner.less';
+@import 'splash.less';
+
+
+@mobile-font-size: 12px;
+@tablet-font-size: 12px;
+
+.medium-font-size {
+    font-size: 1.0em;
+}
+
+.small-font-size {
+    font-size: 0.9em;
+}
+
+h3 {
+    .tablet({
+        margin-top: 15px !important;
+    });
+    .mobile-landscape({
+        font-size: 0.7em;
+        margin-top: 10px !important;
+    });
+    .mobile({
+        margin-top: 25px;
+    });
+
+    margin-top: 15px;
+    margin-bottom: 0px;
+    .medium-font-size();
+    // letter-spacing: 0.03em;
+}
+
+h2 {
+    .mobile-landscape({
+        margin-bottom: 5px;
+        font-size: 0.8em!important;    
+    });
+    margin: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    &.loading > *:not(.allow-while-loading) {
+        display: none;
+    }
+    -webkit-text-size-adjust:100%; //prevent text scaling
+    -moz-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    color: white;
+    margin: 0;
+    padding: 0em; 
+    overflow: none;
+    background-color: #212121;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: medium;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sequencer-label {
+    text-transform: uppercase;
+    .medium-font-size();
+}
+
+#share {
+    margin-right: 48%;
+}
+.output-button {
+    &.about-button {
+        .mobile({
+            margin-left:30px !important;
+        });
+        
+    }
+
+    &.save-button {
+        .mobile({
+            margin-left:10px !important;
+        });
+        
+    }
+    .mobile-landscape({
+        font-size: @mobile-font-size;
+    });
+    .tablet({
+        font-size: @tablet-font-size;
+    });
+    font-weight: normal;
+    white-space: nowrap;
+
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 20px;
+    &:hover {
+        color: white;
+    }
+
+}
+
+// we will show Beat Blender on the splash and about,
+// but not the main experience
+.header {
+    visibility: hidden;
+
+}
+
+.right-column {
+    .mobile({
+        padding-bottom: 150px;
+    })
+}
+
+
+#grid-view, #sequencer-view, .left-column, .right-column, .footer {
+    -webkit-tap-highlight-color:  rgba(0,0,0,0); 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.left-column, .right-column {
+    h1 {
+
+        .mobile({
+            display: none;
+        });
+
+        .mobile-landscape({
+            font-size: 8px;
+        });
+
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: left;
+        margin-left: 20%;
+    }
+    .sequencer-label {
+        text-align: center;
+        letter-spacing: 0.1em;
+        margin-left: 10%;
+    }
+
+    h1, .sequencer-label {
+        .mobile({
+            margin-top: 30px !important;
+        });
+        
+        width: 70%;
+        padding-top: 5%;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+    h3 {
+        letter-spacing: 0.1em;
+    }
+}
+
+
+#grid-container {
+    position: absolute;
+    margin-top: 0;
+}
+
+#sequencer-view {
+    user-select: none;
+    width: 100%;
+}
+
+#grid-view, #group-corners {
+    width: 100%;
+}
+
+#group-corners {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+}
+
+
+
+
+.file-drop{
+	color: black;
+
+    & input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.output-menu-container {
+    .flex();
+    .flex-direction(row);
+    .flex-wrap(nowrap);
+    justify-content: center;
+    align-items: stretch;
+
+    position: relative;
+    max-width: 500px;
+    margin-top: 9%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+//TODO: modify column left and column right to take these attributes in the footer
+#share-space {
+  margin-right: 50%;
+}
