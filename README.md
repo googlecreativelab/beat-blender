@@ -1,7 +1,7 @@
 # Beat Blender
 ### Blend beats using machine learning to create music in a fun new way. [g.co/beatblender](https://g.co/beatblender)
 
-Built using [deeplearn.js](https://deeplearnjs.org) and [MusicVAE](https://github.com/tensorflow/magenta/tree/master/magenta/models/music_vae).
+Built using [deeplearn.js](https://deeplearnjs.org) and [MusicVAE.js](https://goo.gl/magenta/musicvae-js).
 
 ![Beat Blender](./assets/images/screenshot.jpg)
 
